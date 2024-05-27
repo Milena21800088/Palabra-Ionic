@@ -1,0 +1,7 @@
+{
+  "name": "la palabra",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

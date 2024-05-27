@@ -1,0 +1,7 @@
+<ion-input
+  class="custom"
+  [readonly]="validar"
+  [ngClass]="{'verde': css === 'acierto', 'naranja': css === 'casi', 'gris': css === 'fallo'}"
+  [maxlength]="1"
+  [(ngModel)]="opcion"
+></ion-input>
