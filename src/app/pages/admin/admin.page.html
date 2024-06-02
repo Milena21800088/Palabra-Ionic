@@ -10,4 +10,67 @@
       <ion-title size="large">admin</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div class="Registro">
+    <ion-input label="Palabra" labelPlacement="stacked" [(ngModel)]="palabra" placeholder="Digite Nueva Palabra"></ion-input>
+    <ion-button (click)="onUp()" [disabled]="palabra.length != 5">Subir</ion-button>
+  </div>
+  <div style="text-align: center;">
+    <h2>
+      <i>
+        <b>
+          Record's por Categoría
+        </b>
+      </i>
+    </h2>
+  </div>
+  <ion-grid>
+    <ion-row class="table-header">
+      <ion-col class="header-item" style="text-align: center;"><h2><b>Nivel: </b><i>Facil</i></h2></ion-col>
+    </ion-row>
+    <ion-row class="table-header" style="text-align: center;">
+      <ion-col class="header-item">Nombre</ion-col>
+      <ion-col class="header-item">Intentos</ion-col>
+      <ion-col class="header-item">Tiempo</ion-col>
+    </ion-row>
+    <ion-row class="table-row" *ngFor="let F_person of Lista_Facil" style="text-align: center;">
+      <ion-col class="row-item">{{F_person.Nombre}}</ion-col>
+      <ion-col class="row-item">{{F_person.Intentos}}</ion-col>
+      <ion-col class="row-item">{{F_person.Tiempo}}</ion-col>
+    </ion-row>
+  </ion-grid>
+  <br>
+  <!------------------------------------------------------------------------>
+  <ion-grid>
+    <ion-row class="table-header">
+      <ion-col class="header-item" style="text-align: center;"><h2><b>Nivel: </b><i>Normal</i></h2></ion-col>
+    </ion-row>
+    <ion-row class="table-header" style="text-align: center;">
+      <ion-col class="header-item">Nombre</ion-col>
+      <ion-col class="header-item">Intentos</ion-col>
+      <ion-col class="header-item">Tiempo</ion-col>
+    </ion-row>
+    <ion-row class="table-row" *ngFor="let N_person of Lista_Normal" style="text-align: center;">
+      <ion-col class="row-item">{{N_person.Nombre}}</ion-col>
+      <ion-col class="row-item">{{N_person.Intentos}}</ion-col>
+      <ion-col class="row-item">{{N_person.Tiempo}}</ion-col>
+    </ion-row>
+  </ion-grid>
+  <br>
+  <!------------------------------------------------------------------------>
+  <ion-grid>
+    <ion-row class="table-header">
+      <ion-col class="header-item" style="text-align: center;"><h2><b>Nivel: </b><i>Difícil</i></h2></ion-col>
+    </ion-row>
+    <ion-row class="table-header" style="text-align: center;">
+      <ion-col class="header-item">Nombre</ion-col>
+      <ion-col class="header-item">Intentos</ion-col>
+      <ion-col class="header-item">Tiempo</ion-col>
+    </ion-row>
+    <ion-row class="table-row" *ngFor="let D_person of Lista_Dificil" style="text-align: center;">
+      <ion-col class="row-item">{{D_person.Nombre}}</ion-col>
+      <ion-col class="row-item">{{D_person.Intentos}}</ion-col>
+      <ion-col class="row-item">{{D_person.Tiempo}}</ion-col>
+    </ion-row>
+  </ion-grid>
+  <!------------------------------------------------------------------------>
 </ion-content>

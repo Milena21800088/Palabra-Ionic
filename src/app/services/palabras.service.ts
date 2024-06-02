@@ -11,7 +11,7 @@ export class PalabrasService {
   constructor(private http: HttpClient) { }
 
   agregarInformacion(palabra: string): Observable<any> {
-    const url = `${this.apiUrl}/jugadores`;
+    const url = `${this.apiUrl}/palabras/ingresar`;
     return this.http.post<any>(url, { palabra });
   }
 }
